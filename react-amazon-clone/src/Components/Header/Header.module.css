@@ -1,0 +1,51 @@
+.logo {
+    width: 150px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language img {
+    width: 20px;
+}
+
+.top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom_header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+}
