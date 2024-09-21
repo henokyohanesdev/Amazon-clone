@@ -3,71 +3,141 @@ import logo from '../../assets/amazon-logo.png';
 import flag from '../../assets/us-flag.png';
 import { LuMapPin } from "react-icons/lu";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { GoSearch } from "react-icons/go";
+import { IoSearch } from "react-icons/io5";
 import { BiCartAdd } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
+import { IoIosArrowForward } from "react-icons/io";
+import { MdAccountBox } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 import styles from './Header.module.css'
 
 export default function Header() {
+
+
   return (
     <>
-    <div className={styles.top_header}>
-    <a>
-      <img className={styles.logo} src={logo} alt="Amazon logo" />
-    </a>
-      <a href="#" className={styles.location}>
-        <LuMapPin />
-        <div>
-            <p>Delivering to Houston</p>
-            <span>Update location</span>
+      <div className={styles.header}>
+        <div className={styles.top_header}>
+          <a href="#" className={styles.top_menu}>
+            <div className={styles.top_icon}>
+              <AiOutlineMenu size={30} />
+            </div>
+            <img className={styles.top_logo} src={logo} alt="Amazon logo" />
+          </a>
+          <div className={styles.right_header}>
+            <a href="#" className={styles.location}>
+              <LuMapPin />
+              <div className={styles.location_text}>
+                <p className={styles.location_city}>Delivering to Houston</p>
+                <span>Update location</span>
+              </div>
+            </a>
+            <div className={styles.search}>
+              <div className={styles.search_all}>
+                {" "}
+                All <IoMdArrowDropdown />{" "}
+              </div>
+              <input type="text" placeholder="Search Amazon" />
+              <div className={styles.search_icon}>
+                {" "}
+                <IoSearch size={25} />{" "}
+              </div>
+            </div>
+            <a href="#" className={styles.language}>
+              <img className={styles.flag} src={flag} alt="Us flag" />
+              <div>
+                <div className={styles.language_text}>
+                  {" "}
+                  EN <IoMdArrowDropdown />{" "}
+                </div>
+              </div>
+            </a>
+            <a href="#" className={styles.account}>
+              <p className={styles.account_greeting}>
+                <span className={styles.greeting_text}>Hello,</span> Sign in
+                <span className={styles.account_icon}>
+                  <IoIosArrowForward />
+                  <MdAccountBox size={40} />
+                </span>
+              </p>
+              <div className={styles.account_text}>
+                Account & Lists <IoMdArrowDropdown />
+              </div>
+            </a>
+            <a href="#" className={styles.order}>
+              <p className={styles.return_text}>Returns</p>
+              <p className={styles.order_text}> & Orders</p>
+            </a>
+            <a href="#" className={styles.cart}>
+              <BiCartAdd size={45} />
+              <span className={styles.cart_count}>0</span>
+              <p className={styles.cart_text}>Cart</p>
+            </a>
+          </div>
         </div>
-      </a>
-      <div className={styles.search}>
-        
-          <div>All <IoMdArrowDropdown /></div>
-        
-        <input type="text" />
-        <GoSearch />
+        {/* <div className={styles.mobile}> */}
+        <div className={styles.search_mobile}>
+          <input type="text" placeholder="Search Amazon" />
+          <div className={styles.mobile_icon}>
+            <IoSearch size={25} />
+          </div>
+        </div>
+        {/* </div> */}
+        <div className={styles.bottom_header}>
+          <ul>
+            <li className={styles.bottom_all}>
+              <AiOutlineMenu size={20} /> All
+            </li>
+            <li>
+              Medical Care
+              <span className={styles.bottom_icon}>
+                <IoMdArrowDropdown />
+              </span>
+            </li>
+            <li>Best Sellers</li>
+            <li>Amazon Basics</li>
+            <li>
+              Prime
+              <span className={styles.bottom_icon}>
+                <IoMdArrowDropdown />
+              </span>
+            </li>
+            <li>New Releases</li>
+            <li>Music</li>
+            <li>Today's Deals</li>
+            <li>
+              Groceries
+              <span className={styles.bottom_icon}>
+                <IoMdArrowDropdown />
+              </span>
+            </li>
+            <li>Customer Service</li>
+            <li>Amazon Home</li>
+            <li>Registry</li>
+            <li>Books</li>
+            <li>
+              Gift Cards
+              <span className={styles.bottom_icon}>
+                <IoMdArrowDropdown />
+              </span>
+            </li>
+            <li>Pharmacy</li>
+            <li>Smart Home</li>
+            <li>Fashion</li>
+            <li>Toys & Games</li>
+            <li>Luxury Stores</li>
+            <li>Sell</li>
+          </ul>
+        </div>
       </div>
-      <a href="#" className={styles.language}>
-        <img src={flag} alt="Us flag" />
-        <div>
-          <div>EN <IoMdArrowDropdown /></div>
+      <div className={styles.delivery_container}>
+        <div className={styles.delivery}>
+          <LuMapPin size={25} />
+          <p>Delivering to Houston-Update</p>
+          <IoIosArrowDown size={20} />
         </div>
-      </a>
-      <a>
-        <p>Hello, Sign in</p>
-        <div>Account & Lists <IoMdArrowDropdown /></div>
-      </a>
-      <a>
-        <p>Returns</p>
-        <p> & Orders</p>
-      </a>
-      <a href="#" className={styles.cart}>
-        <BiCartAdd size={40}/>
-        <span>0</span>
-        <p>Cart</p>
-      </a>
-    </div>
-    <div className={styles.bottom_header}>
-      <ul>
-        <li><AiOutlineMenu /> All</li>
-        <li>Medical Care <IoMdArrowDropdown /></li>
-        <li>Best Sellers</li>
-        <li>Amazon Basics</li>
-        <li>Prime <IoMdArrowDropdown /></li>
-        <li>New Releases</li>
-        <li>Music</li>
-        <li>Today's Deals</li>
-        <li>Groceries <IoMdArrowDropdown /></li>
-        <li>Customer Service</li>
-        <li>Amazon Home</li>
-        <li>Registry</li>
-        <li>Books</li>
-        <li>Gift Cards <IoMdArrowDropdown /></li>
-        <li>Pharmacy</li>
-      </ul>
-    </div>
+        <span className={styles.join_prime}>Join Prime</span>
+      </div>
     </>
-  )
+  );
 }
