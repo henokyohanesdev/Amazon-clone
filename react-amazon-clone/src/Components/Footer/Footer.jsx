@@ -1,20 +1,37 @@
 import React from 'react'
+import { IoMdArrowDropup } from "react-icons/io";
 import logo from '../../assets/amazon-logo.png'
 import { GrLanguage } from "react-icons/gr";
 import { RiExpandUpDownFill } from "react-icons/ri";
 import flag from '../../assets/us-flag.png'
+import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <>
-      <div>
-        <p>See personalized recommendations</p>
-        <button>sign in</button>
-        <p>
-          New customer?<a>Start here</a>
-        </p>
+      <a href="#" className={styles.back_top}>
+        <IoMdArrowDropup />
+        <p>Back to top</p>
+      </a>
+      <div className={styles.mobile_footer}>
+        <ul>
+          <li>Your Orders</li>
+          <li>Your List</li>
+          <li>Registry & Gift List</li>
+          <li>Your Account</li>
+          <li>Sell Products on Amazon</li>
+          <li>Recalls and product safety Alerts</li>
+          <li>Customer Service</li>
+        </ul>
+        <ul>
+          <li>Amazon Fresh</li>
+          <li>Gift Cards</li>
+          <li>Find a Gift</li>
+          <li>Browsing History</li>
+          <li>Returns</li>
+        </ul>
       </div>
-      <p>Back to top</p>
-      <div className="footer_container">
+
+      <div className={styles.top_footer}>
         <div>
           <h5>Get to Know Us</h5>
           <ul>
@@ -75,20 +92,23 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div>
-        <img src={logo} alt="Amazon logo" />
-        <div>
-          <GrLanguage />
-          English
-          <RiExpandUpDownFill />
+      <div className={styles.footer_background}>
+      <div className={styles.footer_logo}>
+        <img className={styles.logo} src={logo} alt="Amazon logo" />
+        <div className={styles.logo_language}>
+          <GrLanguage size={20} />
+          <span>English</span>
+          <span className={styles.arrow}>
+            <RiExpandUpDownFill />
+          </span>
         </div>
         <div>
-          <img src={flag} alt="Us flag" />
+          <img className={styles.flag} src={flag} alt="Us flag" />
           United States
         </div>
       </div>
       <div>
-        <div>
+        <div className={styles.bottom_footer}>
           <a>
             <p>Amazon Music</p>
             <p>Stream millions</p>
@@ -282,14 +302,21 @@ export default function Footer() {
           </a>
         </div>
         <div>
+          <p className={styles.footer_signin}>Already a customer? Sign in</p>
+        </div>
+        <div className={styles.footer_privacy}>
           <p>Conditions of Use</p>
           <p>Privacy Notice</p>
           <p>Consumer Health Data Privacy Disclosure</p>
-          <p>Your Ads Privacy Choices</p>
+          <p className={styles.hide_privacy}>Your Ads Privacy Choices</p>
         </div>
-        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+        <p className={styles.mobile_privacy}>Your Ads Privacy Choices</p>
+        <p className={styles.footer_copyright}>
+          © 1996-2024, Amazon.com, Inc. or its affiliates
+        </p>
         <p></p>
       </div>
+    </div >
     </>
   );
 }

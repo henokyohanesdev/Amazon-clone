@@ -75,14 +75,12 @@ export default function Header() {
             </a>
           </div>
         </div>
-        {/* <div className={styles.mobile}> */}
         <div className={styles.search_mobile}>
           <input type="text" placeholder="Search Amazon" />
           <div className={styles.mobile_icon}>
             <IoSearch size={25} />
           </div>
         </div>
-        {/* </div> */}
         <div className={styles.bottom_header}>
           <ul>
             <li className={styles.bottom_all}>

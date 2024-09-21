@@ -1,0 +1,94 @@
+.back_top {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #30445C;
+    font-size: 1em;
+    padding: .5em 0;
+    cursor: pointer;
+}
+
+.back_top:hover {
+    background-color: #485769;
+}
+
+.mobile_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: #232F3E;
+    color: white;
+}
+
+.mobile_footer ul {
+    list-style: none;
+    width: 100%;
+}
+
+.mobile_footer ul li {
+    font-size: 1em;
+    padding: 1em 0;
+}
+
+.top_footer, .bottom_footer, .logo, .arrow, .hide_privacy {
+    display: none;
+}
+
+.logo_language {
+    display: flex;
+    align-items: center;
+    gap: .6em;
+}
+
+.flag {
+    width: 2em;
+    margin-right: .6em;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 2em;
+    color: white;
+}
+
+.footer_signin {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.footer_privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: white;
+    padding: 1em;
+    font-size: .65em;
+}
+
+.mobile_privacy {
+    text-align: center;
+    font-size: .65em;
+    color: white;
+}
+
+.footer_copyright {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    font-size: .8em;
+    color: white;
+}
+
+.footer_background {
+    background-color: #131A22;
+}
