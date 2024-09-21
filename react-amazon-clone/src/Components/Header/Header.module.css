@@ -45,7 +45,6 @@
     padding: .5em 1.5em;
     font-size: 1em;
     align-items: center;
-    background-color: #30445c;
 }
 
 .bottom_header ul::-webkit-scrollbar {
@@ -103,6 +102,10 @@
         background-color: #F3A847;
         border-top-right-radius: .5em;
         border-bottom-right-radius: .5em;
+    }
+
+    .header {
+        background-color: #223040;
     }
 
     .delivery {
@@ -242,5 +245,9 @@
         align-items: center;
         font-weight: bold;
     }
+
+    .bottom_header ul {
+    background-color: #30445c;
+}
 
 }
