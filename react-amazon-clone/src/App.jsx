@@ -5,6 +5,7 @@ import Header from './Components/Header/Header'
 import Carousel from './Components/Carousel/Carousel';
 import Footer from './Components/Footer/Footer'
 import './App.css'
+import Catagories from './Components/Categories/Catagories';
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Header />
       <Carousel />
+      <Catagories />
       <Footer />
     </>
   )
