@@ -109,12 +109,12 @@ export default function Footer() {
         <div className={styles.bottom_content}>
           <div className={styles.bottom_footer}>
             <a href="#">
-              <tittle>Amazon Music</tittle>
+              <>Amazon Music</>
               <p>Stream millions</p>
               <p>of songs</p>
             </a>
             <a href="#">
-              <tittle>Amazon Ads</tittle>
+              <>Amazon Ads</>
               <p>Reach</p>
               <p>customers</p>
               <p>wherever</p>
@@ -123,28 +123,28 @@ export default function Footer() {
               <p>time</p>
             </a>
             <a href="#">
-              <tittle>6pm</tittle>
+              <>6pm</>
               <p>Score deals</p>
               <p>on fashion brands</p>
             </a>
             <a href="#">
-              <tittle>AbeBooks</tittle>
+              <>AbeBooks</>
               <p>Books,art</p>
               <p>and collectibles</p>
             </a>
             <a href="#">
-              <tittle>ACX</tittle>
+              <>ACX</>
               <p>Audiobook</p>
               <p>publishing</p>
               <p>Made Easy</p>
             </a>
             <a href="#">
-              <tittle>Sell on Amazon</tittle>
+              <>Sell on Amazon</>
               <p>Start a Selling</p>
               <p>Account</p>
             </a>
             <a href="#">
-              <tittle>Veeqo</tittle>
+              <>Veeqo</>
               <p>Shipping</p>
               <p>software</p>
               <p>inventory</p>
@@ -153,136 +153,136 @@ export default function Footer() {
           </div>
           <div className={styles.bottom_footer}>
             <a href="#">
-              <tittle>Amazon Business</tittle>
+              <>Amazon Business</>
               <p>Everything for</p>
               <p>your business</p>
             </a>
             <a href="#">
-              <tittle>Amazon Fresh</tittle>
+              <>Amazon Fresh</>
               <p>Groceries &</p>
               <p>More</p>
               <p>Right To Your</p>
               <p>Door</p>
             </a>
             <a href="#">
-              <tittle>AmazonGlobal</tittle>
+              <>AmazonGlobal</>
               <p>Ship Orders</p>
               <p>internationally</p>
             </a>
             <a href="#">
-              <tittle>Home Services</tittle>
+              <>Home Services</>
               <p>Experienced pros</p>
               <p>Happiness</p>
               <p>Guarantee</p>
             </a>
             <a href="#">
-              <tittle>Amazon Web</tittle>
+              <>Amazon Web</>
               <p>Services</p>
               <p>Scalable cloud</p>
               <p>computing</p>
               <p>services</p>
             </a>
             <a href="#">
-              <tittle>Audible</tittle>
+              <>Audible</>
               <p>Listen to Books &</p>
               <p>original</p>
               <p>Audio</p>
               <p>performances</p>
             </a>
             <a href="#">
-              <tittle>Box Office Mojo</tittle>
+              <>Box Office Mojo</>
               <p>Find Movie</p>
               <p>Box Office Data</p>
             </a>
           </div>
           <div className={styles.bottom_footer}>
             <a href="#">
-              <tittle>Goodreads</tittle>
+              <>Goodreads</>
               <p>Book reviews</p>
               <p>&</p>
               <p>recommendations</p>
             </a>
             <a href="#">
-              <tittle>IMDB</tittle>
+              <>IMDB</>
               <p>Movies, Tv</p>
               <p>& Celebrities</p>
             </a>
             <a href="#">
-              <tittle>IMDbpro</tittle>
+              <>IMDbpro</>
               <p>Get info Entertainment</p>
               <p>professionals Need</p>
             </a>
             <a href="#">
-              <tittle>Kindle Direct</tittle>
+              <>Kindle Direct</>
               <p>publishing</p>
               <p>indie Digital &</p>
               <p>print publishing</p>
               <p>Made Easy</p>
             </a>
             <a href="#">
-              <tittle>Amazon Photos</tittle>
+              <>Amazon Photos</>
               <p>Unlimited</p>
               <p>photo storage</p>
               <p>Free with</p>
               <p>prime</p>
             </a>
             <a href="#">
-              <tittle>Prime Video</tittle>
+              <>Prime Video</>
               <p>Direct</p>
               <p>video</p>
               <p>Distribution</p>
               <p>Made Easy</p>
             </a>
             <a href="#">
-              <tittle>Shopbop</tittle>
+              <>Shopbop</>
               <p>Designer</p>
               <p>Fashion Brands</p>
             </a>
           </div>
           <div className={styles.bottom_footer}>
             <a href="#">
-              <tittle>Amazon Resale</tittle>
+              <>Amazon Resale</>
               <p>Great Deals on</p>
               <p>Quality Used</p>
               <p>products</p>
             </a>
             <a href="#">
-              <tittle>Whole Foods</tittle>
+              <>Whole Foods</>
               <p>Market</p>
               <p>America's</p>
               <p>Healthiest</p>
               <p>Grocery Store</p>
             </a>
             <a href="#">
-              <tittle>Woot!</tittle>
+              <>Woot!</>
               <p>Deals and</p>
               <p>shenanigans</p>
             </a>
             <a href="#">
-              <tittle>Zappos</tittle>
+              <>Zappos</>
               <p>Shoes &</p>
               <p>Clothing</p>
             </a>
             <a href="#">
-              <tittle>Ring</tittle>
+              <>Ring</>
               <p>Smart Home</p>
               <p>security</p>
               <p>systems</p>
             </a>
             <a href="#">
-              <tittle>eero WIFI</tittle>
+              <>eero WIFI</>
               <p>Stream 4K video</p>
               <p>in Every Room</p>
             </a>
             <a href="#">
-              <tittle>Blink</tittle>
+              <>Blink</>
               <p>Smart security</p>
               <p>for Every Home</p>
             </a>
           </div>
           <div className={styles.bottom_footer}>
             <a href="#" className={styles.footer_a}>
-              <tittle>Neighbors</tittle>
+              <>Neighbors</>
               <p>APP</p>
               <p>Real-Time</p>
               <p>Crime</p>
@@ -290,18 +290,18 @@ export default function Footer() {
               <p>Alerts</p>
             </a>
             <a href="#">
-              <tittle>Amazon Subscription</tittle>
+              <>Amazon Subscription</>
               <p>Boxes</p>
               <p>Top subscription boxes-</p>
               <p>right to your door</p>
             </a>
             <a href="#">
-              <tittle>Phillpack</tittle>
+              <>Phillpack</>
               <p>pharmacy</p>
               <p>simplified</p>
             </a>
             <a href="#">
-              <tittle>Amazon</tittle>
+              <>Amazon</>
               <p>Renewed</p>
               <p>Like-new</p>
               <p>products</p>
