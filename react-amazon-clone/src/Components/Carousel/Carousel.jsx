@@ -1,6 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import img1 from '../../assets/carousel-1.jpg';
 import img2 from '../../assets/carousel-2.jpg';
 import img3 from '../../assets/carousel-3.jpg';
@@ -28,6 +29,30 @@ export default function CarouselEffect() {
                 transitionTime={500}
                 swipeable={true}
                 emulateTouch={true}
+                renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                    hasPrev && (
+                        <button
+                            type="button"
+                            onClick={onClickHandler}
+                            title={label}
+                            className={styles.arrowPrev}
+                        >
+                            <AiOutlineLeft />
+                        </button>
+                    )
+                }
+                renderArrowNext={(onClickHandler, hasNext, label) =>
+                    hasNext && (
+                        <button
+                            type="button"
+                            onClick={onClickHandler}
+                            title={label}
+                            className={styles.arrowNext}
+                        >
+                            <AiOutlineRight />
+                        </button>
+                    )
+                }
             >
                 {images.map((image, index) => (
                     <div key={index}>

@@ -1,13 +1,17 @@
-import React from 'react'
-import Category from './Category/Category'
-import categoryData from '../../utils/catagoryData'
+import React from 'react';
+import Category from './Category/Category';
+import categoryData from '../../utils/categoryData';
+import styles from './category/Category.module.css';
 
 export default function Catagories() {
+
   return (
-    <>
-      {categoryData.map((data) => (
-        <Category key={data.id} {...data} />
-      ))}
-    </>
-  )
+    <div className={styles.categories_container}>
+      <div className={styles.categories}>
+        {categoryData.map((data) => (
+          <Category key={data.id} {...data} />
+        ))}
+      </div>
+    </div>
+  );
 }
