@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/amazon-logo.png';
 import flag from '../../assets/us-flag.png';
 import { LuMapPin } from "react-icons/lu";
@@ -13,17 +14,16 @@ import styles from './Header.module.css'
 
 export default function Header() {
 
-
   return (
     <>
       <div className={styles.header}>
         <div className={styles.top_header}>
-          <a href="#" className={styles.top_menu}>
+          <Link to="/" className={styles.top_menu}>
             <div className={styles.top_icon}>
               <AiOutlineMenu size={30} />
             </div>
             <img className={styles.top_logo} src={logo} alt="Amazon logo" />
-          </a>
+          </Link>
           <div className={styles.right_header}>
             <a href="#" className={styles.location}>
               <LuMapPin />
@@ -34,25 +34,22 @@ export default function Header() {
             </a>
             <div className={styles.search}>
               <div className={styles.search_all}>
-                {" "}
-                All <IoMdArrowDropdown />{" "}
+                All <IoMdArrowDropdown />
               </div>
               <input type="text" placeholder="Search Amazon" />
               <div className={styles.search_icon}>
-                {" "}
-                <IoSearch size={25} />{" "}
+                <IoSearch size={25} />
               </div>
             </div>
             <a href="#" className={styles.language}>
               <img className={styles.flag} src={flag} alt="Us flag" />
               <div>
                 <div className={styles.language_text}>
-                  {" "}
-                  EN <IoMdArrowDropdown />{" "}
+                  EN <IoMdArrowDropdown />
                 </div>
               </div>
             </a>
-            <a href="#" className={styles.account}>
+            <Link to="/signin" className={styles.account}>
               <p className={styles.account_greeting}>
                 <span className={styles.greeting_text}>Hello,</span> Sign in
                 <span className={styles.account_icon}>
@@ -63,16 +60,16 @@ export default function Header() {
               <div className={styles.account_text}>
                 Account & Lists <IoMdArrowDropdown />
               </div>
-            </a>
-            <a href="#" className={styles.order}>
+            </Link>
+            <Link to="/orders" className={styles.order}>
               <p className={styles.return_text}>Returns</p>
               <p className={styles.order_text}> & Orders</p>
-            </a>
-            <a href="#" className={styles.cart}>
+            </Link>
+            <Link to="/cart" className={styles.cart}>
               <BiCartAdd size={45} />
               <span className={styles.cart_count}>0</span>
               <p className={styles.cart_text}>Cart</p>
-            </a>
+            </Link>
           </div>
         </div>
         <div className={styles.search_mobile}>

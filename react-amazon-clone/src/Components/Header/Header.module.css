@@ -2,6 +2,13 @@
     width: 7em;
 }
 
+.top_menu {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
 .right_header {
     display: flex;
 }
@@ -12,12 +19,17 @@
     align-items: center;
     padding: .5em 1.5em;
     background-color: #223040;
+    overflow: visible;
 }
 
 .top_header a {
     text-decoration: none;
     font-size: .9em;
     color: white;
+}
+
+.top_header a:hover {
+    border: 1px solid white;
 }
 
 .cart {
@@ -53,7 +65,15 @@
 
 @media screen and (max-width: 991px) {
 
-    .location, .search, .language, .greeting_text, .account_text, .order, .cart_text, .bottom_all, .bottom_icon {
+    .location,
+    .search,
+    .language,
+    .greeting_text,
+    .account_text,
+    .order,
+    .cart_text,
+    .bottom_all,
+    .bottom_icon {
         display: none;
     }
 
@@ -80,7 +100,6 @@
 
     .cart {
         margin-left: 1em;
-
     }
 
     .search_mobile {
@@ -135,7 +154,10 @@
 
 @media screen and (min-width: 992px) {
 
-    .top_icon, .account_icon, .search_mobile, .delivery_container {
+    .top_icon,
+    .account_icon,
+    .search_mobile,
+    .delivery_container {
         display: none;
     }
 
@@ -186,6 +208,7 @@
         align-items: center;
         gap: .5em;
         font-weight: bold;
+        padding: .5em 0.2em;
     }
 
     .location_city {
@@ -198,6 +221,7 @@
         display: flex;
         align-items: center;
         gap: .5em;
+        padding: .9em 0.2em;
     }
 
     .cart {
@@ -210,14 +234,22 @@
         font-size: .8em;
     }
 
+    .account {
+        padding: .5em 0.2em;
+    }
+
     .account_text {
         font-weight: bold;
     }
-    
+
+    .order {
+        padding: .5em 0.2em;
+    }
+
     .return_text {
         font-size: .8em;
     }
-    
+
     .order_text {
         font-weight: bold;
     }
@@ -237,7 +269,6 @@
 
     .language_text {
         font-weight: bold;
-
     }
 
     .bottom_all {
@@ -247,7 +278,7 @@
     }
 
     .bottom_header ul {
-    background-color: #30445c;
-}
+        background-color: #30445c;
+    }
 
 }
