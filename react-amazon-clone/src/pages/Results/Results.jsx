@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Layout from '../../Components/Layout/Layout'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import SingleProduct from '../../Components/Products/Singleproduct/Singleproduct'
+import SingleProduct from '../../Components/Products/SingleProduct/SingleProduct'
 import styles from './Results.module.css'
 
 export default function Results() {
@@ -15,7 +15,6 @@ export default function Results() {
     axios.get(`https://fakestoreapi.com/products/category/${categoryName}`)
       .then(res => {
         setresult(res.data)
-        console.log(res.data)
       })
       .catch(err => {
         console.log(err)

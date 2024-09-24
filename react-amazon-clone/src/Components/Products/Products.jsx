@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import SingleProduct from './Singleproduct/Singleproduct';
+import SingleProduct from './SingleProduct/SingleProduct';
 import styles from './Products.module.css'
 
 export default function Products() {

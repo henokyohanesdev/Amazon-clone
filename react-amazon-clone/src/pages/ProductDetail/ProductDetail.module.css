@@ -1,0 +1,20 @@
+.title {
+    font-size: clamp(.8em, 1.5vw, 1.5em);
+    font-weight: bold;
+    padding: 1vw;
+    border-bottom: 1px solid gray;
+}
+    @media screen and (max-width: 991px) {
+.product_detail {
+    width: 50%;
+    margin: 3vw auto;
+}
+
+}
+@media screen and (min-width: 992px) {
+    
+    .product_detail {
+        width: 40%;
+        margin: 3vw auto;    
+    }
+}
