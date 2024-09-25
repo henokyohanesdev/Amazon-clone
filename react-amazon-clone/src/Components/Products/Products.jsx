@@ -17,7 +17,7 @@ export default function Products() {
     return (
         <div className={styles.product_container}>
             {product.map((product) => (
-                <SingleProduct key={product.id} {...product} addButton={true}/>
+                <SingleProduct key={product.id} {...product} addButton={true} />
             ))}
         </div>
     )

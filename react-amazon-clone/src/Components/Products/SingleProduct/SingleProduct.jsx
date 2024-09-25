@@ -19,7 +19,7 @@ export default function SingleProduct({ image, id, title, rating, price, descrip
     <div className={flex ? styles.flex_product : styles.product} key={styles.product}>
       <div>
         <Link to={`/products/${id}`}>
-          <img src={image} alt="Product image" />
+          <img className={styles.image} src={image} alt="Product image" />
         </Link>
       </div>
       <div>

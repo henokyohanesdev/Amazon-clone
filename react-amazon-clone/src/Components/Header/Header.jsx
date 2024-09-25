@@ -71,7 +71,9 @@ export default function Header() {
             </Link>
             <Link to="/cart" className={styles.cart}>
               <BiCartAdd size={45} />
-              <span className={styles.cart_count}>{state.cart.length}</span>
+              <span className={styles.cart_count}>
+                {state.cart.reduce((total, item) => total + item.quantity, 0)}
+              </span>
               <p className={styles.cart_text}>Cart</p>
             </Link>
           </div>
