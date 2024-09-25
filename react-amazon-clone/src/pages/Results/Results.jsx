@@ -29,7 +29,7 @@ export default function Results() {
       <p className={styles.title}>Category / {categoryName}</p>
       <div className={styles.products}>
         {result.map((product) => (
-          <SingleProduct key={product.id} {...product} />
+          <SingleProduct key={product.id} {...product} addButton={true}/>
         ))}
       </div>
     </Layout>

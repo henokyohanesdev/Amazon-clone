@@ -7,7 +7,7 @@ import styles from '../Products.module.css'
 import { DataContext } from '../../DataProvider/DataProvider';
 import { ActionTypes } from '../../../utils/actionType';
 
-export default function SingleProduct({ image, id, title, rating, price, description, flex, detail }) {
+export default function SingleProduct({ image, id, title, rating, price, description, flex, detail, addButton }) {
 
   const [state, dispatch]  = useContext( DataContext );
 
@@ -37,7 +37,7 @@ export default function SingleProduct({ image, id, title, rating, price, descrip
         <div className={styles.price}>
           <CurrencyFormat value={price} />
         </div>
-        <button className={styles.button} onClick={addtocart}>Add to Cart</button>
+        {addButton && <button className={styles.button} onClick={addtocart}>Add to Cart</button>}
       </div>
     </div>
   );

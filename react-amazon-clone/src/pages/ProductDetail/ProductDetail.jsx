@@ -28,7 +28,7 @@ export default function ProductDetail() {
       {Loadeing && <Loader />}
       <p className={styles.title}>Product Detail</p>
       <div className={styles.product_detail}>
-        <SingleProduct {...product} flex={true} detail={true} />
+        <SingleProduct {...product} flex={true} detail={true} addButton={true}/>
       </div>
     </Layout>
   )
