@@ -1,10 +1,55 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Layout from '../../Components/Layout/Layout'
 import logo from '../../assets/amazon-logo.png'
 import { Link } from 'react-router-dom'
+import { auth } from '../../utils/firebase'
 import styles from './Auth.module.css'
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+import { DataContext } from '../../Components/DataProvider/DataProvider'
+import { ActionTypes } from '../../utils/actionType'
 
 export default function Auth() {
+
+  const [email, setEmail] = React.useState('')
+  const [password, setPassword] = React.useState('')
+  const [error, setError] = React.useState('')
+
+  const [{ user }, dispatch] = useContext(DataContext)
+
+  console.log(user);
+
+  const handleAuth = async (e) => {
+    e.preventDefault()
+    if (e.target.name === 'signin') {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          dispatch({ type: ActionTypes.SET_USER, user: userCredential.user })
+          console.log(user)
+        })
+        .catch((error) => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          console.log(errorCode, errorMessage)
+        })
+
+    }
+    else {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          dispatch({ type: ActionTypes.SET_USER, user: userCredential.user })
+          console.log(user)
+        })
+        .catch((error) => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          console.log(errorCode, errorMessage)
+        })
+
+    }
+  }
+
   return (
     <Layout>
       <div>
@@ -12,17 +57,17 @@ export default function Auth() {
         <div className={styles.container}>
           <h1 className={styles.title}>sign in</h1>
           <form>
-            <h5 className={styles.label}>Email</h5>
-            <input type="text" className={styles.input} />
-            <h5 className={styles.label}>Password</h5>
-            <input type="password" className={styles.input} />
-            <button className={styles.button}>Sign In</button>
+            <label className={styles.label} htmlFor='email'>Email</label>
+            <input type="email" className={styles.input} value={email} onChange={(e) => setEmail(e.target.value)} />
+            <label className={styles.label} htmlFor='password'>Password</label>
+            <input type="password" className={styles.input} value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button className={styles.button} name='signin' type='submit' onClick={handleAuth}>Sign In</button>
           </form>
           <p className={styles.text}>By continuing, you agree to my Amazon-clone Conditions of Use and Privacy Notice.</p>
           <p>new to Amazon?</p>
-          <button className={styles.button}>Create your Amazon account</button>
+          <button className={styles.button} name='signup' type='submit' onClick={handleAuth}>Create your Amazon account</button>
+        </div>
       </div>
-    </div>
     </Layout>
   )
 }

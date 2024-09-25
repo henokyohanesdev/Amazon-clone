@@ -2,6 +2,7 @@ import { ActionTypes } from "./actionType";
 
 export const initialState = {
   cart: [],
+  user: null,
 };
 
 export const reducer = (state, action) => {
@@ -43,7 +44,6 @@ export const reducer = (state, action) => {
           // Remove item if quantity is 1
           updatedCart.splice(itemIndex, 1);
         }
-
         return {
           ...state,
           cart: updatedCart,
@@ -51,6 +51,12 @@ export const reducer = (state, action) => {
       }
 
       return state;
+
+    case ActionTypes.SET_USER:
+      return {
+        ...state,
+        user: action.user,
+      };
 
     default:
       return state;
