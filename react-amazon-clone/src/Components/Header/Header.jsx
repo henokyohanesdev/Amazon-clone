@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../DataProvider/DataProvider';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/amazon-logo.png';
 import flag from '../../assets/us-flag.png';
@@ -13,6 +14,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import styles from './Header.module.css'
 
 export default function Header() {
+
+  const [state, dispatch] = useContext(DataContext)
+  
 
   return (
     <>
@@ -67,7 +71,7 @@ export default function Header() {
             </Link>
             <Link to="/cart" className={styles.cart}>
               <BiCartAdd size={45} />
-              <span className={styles.cart_count}>0</span>
+              <span className={styles.cart_count}>{state.cart.length}</span>
               <p className={styles.cart_text}>Cart</p>
             </Link>
           </div>

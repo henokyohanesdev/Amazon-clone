@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Rating from '@mui/material/Rating'
 import { IoIosArrowDown } from "react-icons/io";
 import CurrencyFormat from '../../CurrencyFormat/CurrencyFormat'
 import { Link } from 'react-router-dom'
 import styles from '../Products.module.css'
+import { DataContext } from '../../DataProvider/DataProvider';
+import { ActionTypes } from '../../../utils/actionType';
 
 export default function SingleProduct({ image, id, title, rating, price, description, flex, detail }) {
+
+  const [state, dispatch]  = useContext( DataContext );
+
+  const addtocart = () => {
+    dispatch({ type: ActionTypes.ADD_TO_CART, item: { image, id, title, rating, price, description } })
+  }
 
   return (
     <div className={flex ? styles.flex_product : styles.product} key={styles.product}>
@@ -29,7 +37,7 @@ export default function SingleProduct({ image, id, title, rating, price, descrip
         <div className={styles.price}>
           <CurrencyFormat value={price} />
         </div>
-        <button className={styles.button}>Add to Cart</button>
+        <button className={styles.button} onClick={addtocart}>Add to Cart</button>
       </div>
     </div>
   );
