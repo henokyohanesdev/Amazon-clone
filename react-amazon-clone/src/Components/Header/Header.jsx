@@ -53,7 +53,7 @@ export default function Header() {
                 </div>
               </div>
             </a>
-            <Link to="/signin" className={styles.account}>
+            <Link to="/auth" className={styles.account}>
               <p className={styles.account_greeting}>
                 <span className={styles.greeting_text}>Hello,</span> Sign in
                 <span className={styles.account_icon}>
