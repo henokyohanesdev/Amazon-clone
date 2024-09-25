@@ -5,10 +5,10 @@ import CurrencyFormat from '../../CurrencyFormat/CurrencyFormat'
 import { Link } from 'react-router-dom'
 import styles from '../Products.module.css'
 
-export default function SingleProduct({ image, id, title, rating, price }) {
-  
+export default function SingleProduct({ image, id, title, rating, price, description, flex, detail }) {
+
   return (
-    <div className={styles.product}>
+    <div className={flex ? styles.flex_product : styles.product} key={styles.product}>
       <div>
         <Link to={`/products/${id}`}>
           <img src={image} alt="Product image" />
@@ -16,6 +16,7 @@ export default function SingleProduct({ image, id, title, rating, price }) {
       </div>
       <div>
         <p className={styles.title}>{title}</p>
+        {detail && <p className={styles.description}>{description}</p>}
         <div className={styles.rating}>
           <Rating
             value={rating?.rate || 0}

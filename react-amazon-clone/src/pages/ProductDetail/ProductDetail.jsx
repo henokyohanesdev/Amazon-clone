@@ -8,7 +8,7 @@ import styles from './ProductDetail.module.css'
 
 export default function ProductDetail() {
 
-  const {productId} = useParams();
+  const { productId } = useParams();
   const [product, setProduct] = useState({});
   const [Loadeing, setLoadering] = useState(false);
 
@@ -28,7 +28,7 @@ export default function ProductDetail() {
       {Loadeing && <Loader />}
       <p className={styles.title}>Product Detail</p>
       <div className={styles.product_detail}>
-      <SingleProduct {...product} />
+        <SingleProduct {...product} flex={true} detail={true} />
       </div>
     </Layout>
   )
