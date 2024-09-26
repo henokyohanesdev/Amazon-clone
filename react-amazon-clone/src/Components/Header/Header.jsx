@@ -15,7 +15,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
 
-  const [state, dispatch] = useContext(DataContext)
+  const [{ user, cart }, dispatch] = useContext(DataContext)
   
 
   return (
@@ -53,9 +53,13 @@ export default function Header() {
                 </div>
               </div>
             </a>
-            <Link to="/auth" className={styles.account}>
+
+            
+
+            <Link to={user ? "/account" : "/auth"} className={styles.account}>
               <p className={styles.account_greeting}>
-                <span className={styles.greeting_text}>Hello,</span> Sign in
+                <span className={styles.greeting_text}>Hello, </span>
+                {user ? (user?.email?.split("@")[0]) : 'Sign in'}
                 <span className={styles.account_icon}>
                   <IoIosArrowForward />
                   <MdAccountBox size={40} />
@@ -72,7 +76,8 @@ export default function Header() {
             <Link to="/cart" className={styles.cart}>
               <BiCartAdd size={45} />
               <span className={styles.cart_count}>
-                {state.cart.reduce((total, item) => total + item.quantity, 0)}
+                {cart ? cart.reduce((total, item) => total + item.quantity, 0)
+                  : 0}
               </span>
               <p className={styles.cart_text}>Cart</p>
             </Link>
