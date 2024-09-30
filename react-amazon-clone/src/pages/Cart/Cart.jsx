@@ -66,7 +66,7 @@ export default function Cart() {
               <input type="checkbox" />
               This order contains a gift
             </p>
-            <Link className={styles.checkout} to="/checkout">Proceed to Checkout</Link>
+            <Link className={styles.checkout} to="/payment">Proceed to Checkout</Link>
           </div>
         )}
         </div>

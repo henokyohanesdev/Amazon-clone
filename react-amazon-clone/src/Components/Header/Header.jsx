@@ -16,7 +16,7 @@ import styles from './Header.module.css'
 export default function Header() {
 
   const [{ user, cart }, dispatch] = useContext(DataContext)
-  
+  const total = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <>
@@ -76,8 +76,7 @@ export default function Header() {
             <Link to="/cart" className={styles.cart}>
               <BiCartAdd size={45} />
               <span className={styles.cart_count}>
-                {cart ? cart.reduce((total, item) => total + item.quantity, 0)
-                  : 0}
+                {cart ? total : 0}
               </span>
               <p className={styles.cart_text}>Cart</p>
             </Link>
