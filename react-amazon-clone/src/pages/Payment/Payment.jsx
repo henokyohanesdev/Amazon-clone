@@ -9,10 +9,11 @@ import { FadeLoader } from 'react-spinners';
 import { db } from '../../utils/firebase'
 import { doc, setDoc, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
+import { ActionTypes } from '../../utils/actionType';
 
 export default function Payment() {
 
-  const [{ user, cart }] = useContext(DataContext);
+  const [{ user, cart }, dispatch] = useContext(DataContext);
   const total = cart.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cart.reduce((total, item) => total + item.quantity * item.price, 0);
   const stripe = useStripe();
@@ -58,7 +59,7 @@ export default function Payment() {
             created: paymentIntent.created,
         });
 
-        
+        dispatch({ type: ActionTypes.RESET_CART });
     console.log("end");
       setProcessing(false);
       navigate("/orders", {state: {msg: "Payment successful!"}});

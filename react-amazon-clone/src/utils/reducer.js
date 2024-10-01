@@ -51,6 +51,12 @@ export const reducer = (state, action) => {
       }
 
       return state;
+      
+    case ActionTypes.RESET_CART:
+      return {
+        ...state,
+        cart: [],
+      };
 
     case ActionTypes.SET_USER:
       return {
